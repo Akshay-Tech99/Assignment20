@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            /* border:2px solid black; */
+            display:grid;
+            /* display:wrap; */
+            
+            grid-template-areas:
+            "area1 area2 area3"
+            "area1 area5 area6"
+            "area7 area5 area9";
+            gap:10px;
+            
+            width:50%;
+            justify-content:center;
+            align-content:center;
+            /* background-color:red; */
+            /* PADDING-left:100px; */
+            /* margin-left:auto;
+            margin-right:auto; */
+
+        }
+        @media screen and (min-width:0px) and (max-width:2000px){
+            .main{
+                /* background-color: red; */
+            }
+        }
+
+        .image{
+            /* border:solid red; */
+            /* height:200px; */
+            width:100px;
+            border-top-right-radius:10px;
+            border-bottom-left-radius:10px;
+            border-style: dotted;
+            border-color:black;
+            /* background-color:red; */
+            
+        }
+        .image:hover{
+            transform:scale(1.1);
+
+            /* height:150px;
+            width:150px; */
+            
+        }
+        .img1{
+            grid-area:area1;
+            height:160px;
+            background-image:url('static/deadpool.jpg');
+            background-size:contain;
+        
+        }
+        .img2{
+            grid-area:area2;
+            /* height:80px; */
+            background-image:url('static/deadpool5.jpg');
+            background-size:cover;
+        }
+        .img3{
+            grid-area:area3;
+            background-image:url('./static/deadpool3.jpg');
+            background-size:cover;
+            background-repeat:no-repeat;
+        }
+        /* .img4{
+            grid-area:area4;
+        } */
+        .img5{
+            grid-area:area5;
+            background-image:url('static/deadpool2.jpg');
+            background-size:contain;
+        }
+        .img6{
+            grid-area:area6;
+            background-image:url('./static/deadpool6.jpg');
+            background-size:cover;
+            background-repeat:no-repeat;
+        }
+        .img7{
+            grid-area:area7;
+            height:90px;
+            background-image:url('./static/deadpool7.jpg');
+            background-size:cover;
+            background-repeat:no-repeat;
+        }
+        /* .img8{
+            grid-area:area8;
+        } */
+        .img9{
+            grid-area:area9;
+            background-image:url('./static/deadpool4.jpg');
+            background-size:cover;
+            background-repeat:no-repeat;
+
+        }
+        h1{
+            font-family:papyrus;
+        }
+    </style>
+</head>
+<body>
+    <marquee><h1>IMAGES USING GRID</h1></marquee>
+    <div class="main">
+        <div class="image img1"></div>
+        <div class="image img2"></div>
+        <div class="image img3"></div>
+        <!-- <div class="image img4">item 4</div> -->
+        <div class="image img5"></div>
+        <div class="image img6"></div>
+        <div class="image img7"></div>
+        <!-- <div class="image img8">item 8</div> -->
+        <div class="image img9"></div>
+        
+    </div>
+</body>
+</html>
